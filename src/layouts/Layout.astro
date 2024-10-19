@@ -1,50 +1,71 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+import '@fontsource-variable/rubik';
+import '@fontsource/questrial';
+import SideNav from '../components/SideNav.astro';
+import MailIcon from '../components/icons/mail';
+import WhatsappIcon from '../components/icons/whatsapp';
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <header class='flex justify-center relative'>
+      <SideNav />
+      <img class='h-24' src='/full-logo.png' alt='SICSAS logo' />
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class='bg-pale p-5 space-y-5 h-full text-white'>
+      <p class='text-xl'>
+        Para cotizaciones o programar una visita, por favor contactarnos.
+      </p>
+      <div>
+        <div class='flex items-center gap-2'>
+          <MailIcon className='text-3xl' />
+          <p>Correo electrónico</p>
+        </div>
+        <p>seguridadindustrialcardenas@gmail.com</p>
+      </div>
+      <div>
+        <div class='flex items-center gap-2'>
+          <WhatsappIcon className='text-3xl' />
+          <p>Celulares y Whatsapp</p>
+        </div>
+        <p>316 423 7947 y 316 423 7948</p>
+      </div>
+    </footer>
+  </body>
 </html>
+
+<style>
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+</style>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  html {
+    font-family: 'Rubik Variable', sans-serif;
+  }
+
+  body {
+    min-height: 100dvh;
+  }
 </style>
