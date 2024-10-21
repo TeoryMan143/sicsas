@@ -1,8 +1,10 @@
 ---
-import SideNav from './SideNav.astro';
+import SideNav from './SideNav';
 ---
 
 <header class='flex justify-center relative'>
-  <SideNav />
-  <img class='h-24' src='/full-logo.png' alt='SICSAS logo' />
+  <SideNav client:load />
+  <a href='/'>
+    <img class='h-24' src='/full-logo.png' alt='SICSAS logo' />
+  </a>
 </header>

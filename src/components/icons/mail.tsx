@@ -1,14 +1,10 @@
-function MailIcon({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<'svg'>) {
+function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width='0.88em'
       height='1em'
       viewBox='0 0 14 16'
-      className={className}
       {...props}
     >
       <path
