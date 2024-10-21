@@ -1,10 +1,10 @@
 ---
 import PageTitle from '@components/PageTitle.astro';
 import Layout from '@layouts/Layout.astro';
+import IndexCarousel from '@components/index-carousel';
 ---
 
 <Layout title='Welcome to Astro.'>
   <PageTitle>Inicio</PageTitle>
+  <IndexCarousel client:visible />
 </Layout>
-
-<style></style>

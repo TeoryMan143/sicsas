@@ -40,9 +40,12 @@ function SideNav() {
   return (
     <>
       <div
-        className={cn('absolute h-dvh w-dvw bg-slate-600/50 z-20 hidden', {
-          block: open,
-        })}
+        className={cn(
+          'absolute h-dvh w-dvw bg-slate-600/50 z-[100] hidden [transition-behavior:allow-discrete] transition-[display]',
+          {
+            block: open,
+          },
+        )}
         onClick={() => setOpen(false)}
       />
       <button
@@ -65,7 +68,7 @@ function SideNav() {
       </button>
       <nav
         className={cn(
-          'absolute rounded-xl py-10 pl-7 pr-12 bg-white shadow-lg top-3 z-30 left-0 -translate-x-full transition-transform',
+          'absolute rounded-xl py-10 pl-7 pr-12 bg-white shadow-lg top-3 z-[150] left-0 -translate-x-full transition-transform',
           {
             'translate-x-0': open,
           },
