@@ -5,6 +5,7 @@ import HomeIcon from './icons/home';
 import PersonIcon from './icons/person';
 import PhoneIcon from './icons/phone';
 import { useState } from 'react';
+import '@/styles/side-nav.css';
 
 const LINKS_DATA = [
   {
@@ -41,15 +42,15 @@ function SideNav() {
     <>
       <div
         className={cn(
-          'absolute h-dvh w-dvw bg-slate-600/50 z-[100] hidden [transition-behavior:allow-discrete] transition-[display]',
+          'fixed h-dvh w-dvw bg-slate-600/50 z-[100] hidden [transition-behavior:allow-discrete] transition-[display]',
           {
-            block: open,
+            inline: open,
           },
         )}
         onClick={() => setOpen(false)}
       />
       <button
-        className='text-detail text-3xl absolute left-8 top-1/2 -translate-y-1/2'
+        className='text-detail text-3xl absolute left-8 bottom-1/2 translate-y-1/2 side-nav'
         onClick={() => setOpen(true)}
       >
         <svg
@@ -68,7 +69,7 @@ function SideNav() {
       </button>
       <nav
         className={cn(
-          'absolute rounded-xl py-10 pl-7 pr-12 bg-white shadow-lg top-3 z-[150] left-0 -translate-x-full transition-transform',
+          'fixed inline rounded-xl py-10 pl-7 pr-12 bg-white shadow-lg top-3 z-[150] left-0 -translate-x-full transition-transform',
           {
             'translate-x-0': open,
           },

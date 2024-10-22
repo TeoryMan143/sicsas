@@ -25,7 +25,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <Header />
-    <main>
+    <main class='mt-24 relative'>
       <slot />
     </main>
     <Footer />
@@ -35,7 +35,7 @@ const { title } = Astro.props;
 <style>
   body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
   }
 </style>
 <style is:global>

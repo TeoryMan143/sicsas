@@ -1,0 +1,13 @@
+.side-nav {
+  transform-origin: top;
+  animation-name: move;
+  animation-timeline: scroll();
+  animation-range-end: 300px;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  to {
+    transform: translate(-70%, 50%);
+  }
+}
