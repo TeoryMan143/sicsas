@@ -10,6 +10,7 @@ import './style.css';
 import { useEffect, useState } from 'react';
 import { DialogTitle } from '@radix-ui/react-dialog';
 import Copiable from '../copiable';
+import ContactForm from './form';
 
 const CONTACT_INFO = [
   {
@@ -66,11 +67,11 @@ function ContactDialog() {
           Contactenos
         </button>
       </DialogTrigger>
-      <DialogContent className='flex flex-col p-0 mx-1 border-0 overflow-x-hidden'>
+      <DialogContent className='flex flex-col p-0 mx-1 border-0 overflow-x-hidden max-h-[80%]'>
         <DialogTitle className='sr-only'>Contáctanos</DialogTitle>
         <div className='bg-contact bg-cover relative'>
           <div className='bg-slate-900/60 h-full w-full absolute z-20' />
-          <div className='relative z-30 mt-12'>
+          <div className='relative z-30 mt-12 mb-6'>
             <SecTitle className='text-left overflow-visible inline-block relative ml-6 after:h-1.5 after:w-1/2 after:absolute after:top-9 after:left-0 after:bg-white'>
               Contáctanos
             </SecTitle>
@@ -80,6 +81,12 @@ function ContactDialog() {
               ))}
             </ul>
           </div>
+        </div>
+        <div className='p-5 font-rubik'>
+          <h3 className='text-bright text-2xl text-center mb-3'>
+            Envíanos un mensaje
+          </h3>
+          <ContactForm />
         </div>
       </DialogContent>
     </Dialog>
