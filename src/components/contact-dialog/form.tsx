@@ -1,5 +1,6 @@
 import FormButton from './button';
 import FormInput from './input';
+import FormTextArea from './text-area';
 
 function ContactForm() {
   return (
@@ -22,7 +23,7 @@ function ContactForm() {
         <FormInput placeholder='Asunto' className='w-full' id='subject' />
       </div>
       <div>
-        <FormInput placeholder='Mensaje' className='w-full' id='message' />
+        <FormTextArea placeholder='Mensaje' className='w-full' id='message' />
       </div>
       <FormButton>Enviar</FormButton>
     </form>
