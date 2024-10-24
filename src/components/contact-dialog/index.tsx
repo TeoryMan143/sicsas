@@ -100,7 +100,7 @@ function ContactItem({
   return (
     <li className='font-questrial text-lg'>
       <h3 className='ml-6 text-white'>{title}</h3>
-      <Copiable addToClipboard={copy} itemName={title}>
+      <Copiable addToClipboard={copy}>
         <div
           className={cn(
             `
