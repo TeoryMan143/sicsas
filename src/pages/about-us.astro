@@ -1,8 +1,17 @@
 ---
+import Mission from '@/components/about-us/Mission.astro';
+import Vision from '@/components/about-us/Vision.astro';
 import PageTitle from '@/components/PageTitle.astro';
+import SecTitle from '@/components/ui/sec-title';
 import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout title='Quiénes somos'>
   <PageTitle>Quiénes somos</PageTitle>
+  <div class='py-20 bg-about-us bg-cover relative'>
+    <div class='absolute z-10 bg-bright/60 size-full inset-0'></div>
+    <SecTitle className='relative z-20'> Acerca de nosotros </SecTitle>
+  </div>
+  <Mission />
+  <Vision />
 </Layout>

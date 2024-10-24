@@ -1,0 +1,60 @@
+---
+import SecTitle from '@components/ui/sec-title';
+---
+
+<section
+  class='p-6 my-28 flex flex-col gap-4 bg-bright relative overflow-y-visible'
+>
+  <div class='top-triangle'></div>
+  <div class='bottom-triangle'></div>
+  <div>
+    <SecTitle
+      className='text-white text-right overflow-visible relative after:h-1.5 after:w-1/2 after:absolute after:top-9 after:right-0 after:bg-white'
+    >
+      Nuestra Visión
+    </SecTitle>
+    <p class='prose font-questrial mt-4 text-white text-right'>
+      Ser una empresa modelo y líder en el ofrecimiento de productos y servicios
+      de Sistemas Contra Incendio y de Seguridad Industrial, para preservar y
+      proteger a las personas, los equipos, las instalaciones y el medio
+      ambiente, garantizado la satisfacción de los clientes a través de un
+      servicio que brinda atención, apoyo permanente, precios competitivos y
+      entregas oportunas.
+    </p>
+  </div>
+  <img
+    class='aspect-[2/3] object-cover w-56 mx-auto rounded-sm'
+    src='/img/vision.webp'
+    alt='Visión'
+  />
+</section>
+
+<style>
+  .top-triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 0 6.5rem 100vw;
+    border-color: transparent transparent #0466c8 transparent;
+    transform: rotate(0deg);
+
+    position: absolute;
+    top: -6.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .bottom-triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 6.5rem 100vw 0 0;
+    border-color: #0466c8 transparent transparent transparent;
+    transform: rotate(0deg);
+
+    position: absolute;
+    bottom: -6.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>

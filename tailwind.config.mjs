@@ -24,6 +24,7 @@ export default {
       backgroundImage: {
         carousel: 'url("/img/bg-carousel.webp")',
         contact: 'url("/img/bg-contact.webp")',
+        'about-us': 'url("/img/bg-about-us.webp")',
       },
     },
   },
