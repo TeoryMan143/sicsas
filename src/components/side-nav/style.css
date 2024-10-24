@@ -9,5 +9,6 @@
 @keyframes move {
   to {
     transform: translate(-70%, 50%);
+    color: #333;
   }
 }

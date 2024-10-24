@@ -1,11 +1,11 @@
 import { cn } from '@/core/utils';
-import BoxIcon from './icons/box';
-import ConfigIcon from './icons/config';
-import HomeIcon from './icons/home';
-import PersonIcon from './icons/person';
-import PhoneIcon from './icons/phone';
+import BoxIcon from '../icons/box';
+import ConfigIcon from '../icons/config';
+import HomeIcon from '../icons/home';
+import PersonIcon from '../icons/person';
 import { useState } from 'react';
-import '@/styles/side-nav.css';
+import './style.css';
+import ContactDialog from '../contact-dialog';
 
 const LINKS_DATA = [
   {
@@ -28,11 +28,6 @@ const LINKS_DATA = [
     icon: <BoxIcon />,
     text: 'Productos',
   },
-  {
-    href: '/contact',
-    icon: <PhoneIcon />,
-    text: 'Contactenos',
-  },
 ] as const;
 
 function SideNav() {
@@ -41,12 +36,9 @@ function SideNav() {
   return (
     <>
       <div
-        className={cn(
-          'fixed h-dvh w-dvw bg-slate-600/50 z-[100] hidden [transition-behavior:allow-discrete] transition-[display]',
-          {
-            inline: open,
-          },
-        )}
+        className={cn('fixed h-dvh w-dvw bg-slate-600/50 z-[100] hidden', {
+          'inline-block': open,
+        })}
         onClick={() => setOpen(false)}
       />
       <button
@@ -83,6 +75,9 @@ function SideNav() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <ContactDialog />
+          </li>
         </ul>
       </nav>
     </>

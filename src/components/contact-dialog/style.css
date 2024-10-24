@@ -1,0 +1,24 @@
+.triangle::after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  transform: rotate(0deg);
+  position: absolute;
+}
+
+.t-wsp::after {
+  border-width: 80px 80px 0 0;
+  right: -80px;
+}
+
+.t-tefubi::after {
+  border-width: 52px 52px 0 0;
+  right: -52px;
+}
+
+.t-mail::after {
+  border-width: 48px 48px 0 0;
+  right: -48px;
+}

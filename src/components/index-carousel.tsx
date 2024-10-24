@@ -8,6 +8,7 @@ import {
   type CarouselApi,
 } from './ui/carousel';
 import { useEffect, useState } from 'react';
+import SecTitle from './ui/sec-title';
 
 const TITLES = [
   'Soluciones Integrales en Sistemas Contra Incendio',
@@ -31,9 +32,7 @@ function IndexCarousel() {
     <section className='bg-carousel bg-cover relative py-8'>
       <div className='absolute top-0 left-0 size-full bg-slate-950/60 z-10' />
       <div className='relative z-20 space-y-5'>
-        <h2 className='text-white font-bold text-2xl text-center line-clamp-2 px-4'>
-          {TITLES[current]}
-        </h2>
+        <SecTitle>{TITLES[current]}</SecTitle>
         <Carousel opts={{ loop: true }} setApi={setApi}>
           <CarouselContent>
             {Array.from({ length: 3 }).map((_, i) => (
