@@ -9,6 +9,7 @@ import { cn } from '@/core/utils';
 import './style.css';
 import { useEffect, useState } from 'react';
 import { DialogTitle } from '@radix-ui/react-dialog';
+import Copiable from '../copiable';
 
 const CONTACT_INFO = [
   {
@@ -21,21 +22,25 @@ const CONTACT_INFO = [
       </>
     ),
     title: 'WhatsApp y Número celular',
+    copy: '3164237947',
   },
   {
     icon: <PhoneIcon />,
     content: '602 3991097',
     title: 'Teléfono fijo',
+    copy: '6023991097',
   },
   {
     icon: <MailIcon />,
     content: 'seguridadindustrialcardenas@gmail.com',
     title: 'Correo electrónico',
+    copy: 'seguridadindustrialcardenas@gmail.com',
   },
   {
     icon: <MarkerIcon />,
     content: 'Cali, Valle - Colombia',
     title: 'Ubicación',
+    copy: 'Cali, Valle - Colombia',
   },
 ];
 
@@ -85,42 +90,46 @@ function ContactItem({
   title,
   icon,
   content,
+  copy,
 }: {
   title: string;
   icon: React.ReactNode;
   content: React.ReactNode;
+  copy: string;
 }) {
   return (
     <li className='font-questrial text-lg'>
       <h3 className='ml-6 text-white'>{title}</h3>
-      <div
-        className={cn(
-          `
-            bg-white py-3 inline-flex pl-3 pr-4 items-center relative triangle group transition
-            hover:translate-x-8 hover:bg-bright
-            after:hover:border-t-bright
-          `,
-          {
-            't-wsp': title == 'WhatsApp y Número celular',
-            't-tefubi': title == 'Teléfono fijo' || title == 'Ubicación',
-            't-mail': title == 'Correo electrónico',
-          },
-        )}
-      >
-        <div className='bg-white absolute h-full w-8 -left-8 transition-colors group-hover:bg-bright' />
-        <div className='inline-flex gap-3 items-center group-hover:text-white'>
-          <span className='text-2xl text-bright group-hover:text-white'>
-            {icon}
-          </span>
-          <p
-            className={cn({
-              'text-sm': title == 'Correo electrónico',
-            })}
-          >
-            {content}
-          </p>
+      <Copiable addToClipboard={copy} itemName={title}>
+        <div
+          className={cn(
+            `
+              bg-white py-3 inline-flex pl-3 pr-4 items-center relative triangle group transition
+              hover:translate-x-8 hover:bg-bright
+              after:hover:border-t-bright
+            `,
+            {
+              't-wsp': title == 'WhatsApp y Número celular',
+              't-tefubi': title == 'Teléfono fijo' || title == 'Ubicación',
+              't-mail': title == 'Correo electrónico',
+            },
+          )}
+        >
+          <div className='bg-white absolute h-full w-8 -left-8 transition-colors group-hover:bg-bright' />
+          <div className='inline-flex gap-3 items-center group-hover:text-white'>
+            <span className='text-2xl text-bright group-hover:text-white'>
+              {icon}
+            </span>
+            <p
+              className={cn({
+                'text-sm': title == 'Correo electrónico',
+              })}
+            >
+              {content}
+            </p>
+          </div>
         </div>
-      </div>
+      </Copiable>
     </li>
   );
 }
