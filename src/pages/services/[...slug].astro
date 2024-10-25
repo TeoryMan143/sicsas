@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map(entry => ({
+    params: { slug: entry.slug },
+    props: entry,
+  }));
+}
+
+const {
+  data: { image, title },
+  render,
+} = Astro.props;
+
+const { Content } = await render();
+---
+
+<Layout title={title}>
+  <img src={image} alt='' />
+
+  <h2>{title}</h2>
+
+  <article
+    class='prose prose-headings:text-dark prose-li:marker:text-dark prose-strong:text-dark'
+  >
+    <Content />
+  </article>
+</Layout>

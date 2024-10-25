@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import SecTitle from '../ui/sec-title';
+import ServiceLink from './ServiceLink.astro';
+
+const services = await getCollection('services');
+---
+
+<section class='mt-12 p-3'>
+  <SecTitle
+    className='text-bright text-center overflow-visible relative after:h-1.5 after:w-32 after:absolute after:top-24 after:left-1/2 after:-translate-x-1/2 after:bg-bright mb-16'
+  >
+    Líneas dentro de los Servicios de los Sistemas Contra Incendio
+  </SecTitle>
+  <div class='flex flex-wrap gap-6'>
+    {
+      services.map(({ data: { image, title }, slug }) => (
+        <ServiceLink title={title} imgUrl={image} slug={slug} />
+      ))
+    }
+  </div>
+</section>

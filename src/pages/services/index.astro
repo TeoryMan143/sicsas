@@ -1,0 +1,32 @@
+---
+import PageTitle from '@/components/PageTitle.astro';
+import ServicesInfo from '@/components/services/ServicesInfo.astro';
+import ServLines from '@/components/services/ServLines.astro';
+import SecTitle from '@/components/ui/sec-title';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title='Servicios'>
+  <PageTitle>Servicios</PageTitle>
+  <div class='py-20 bg-about-us bg-cover relative'>
+    <div class='absolute z-10 bg-bright/60 size-full inset-0'></div>
+    <SecTitle className='relative z-20'>
+      Servicios de Sistemas contra Incendio
+    </SecTitle>
+  </div>
+  <section>
+    <ServicesInfo
+      title='Diseño de Sistemas Contra Incendio'
+      imgUrl='/img/ser1.webp'
+    />
+    <ServicesInfo
+      title='Instalación de Sistemas contra Incendio'
+      imgUrl='/img/ser2.webp'
+    />
+    <ServicesInfo
+      title='IPM - Inspección, Prueba y Mantenimiento de Sistemas Contra Incendio'
+      imgUrl='/img/ser3.webp'
+    />
+  </section>
+  <ServLines />
+</Layout>

@@ -1,0 +1,28 @@
+---
+import SecTitle from '../ui/sec-title';
+
+interface Props {
+  title: string;
+  imgUrl: string;
+  reverse?: boolean;
+}
+
+const { title, imgUrl, reverse = false } = Astro.props;
+---
+
+<div class='flex flex-col'>
+  <div class='bg-dark py-16 flex-1'>
+    <SecTitle>{title}</SecTitle>
+  </div>
+  <div class='flex-1 relative'>
+    <div
+      class='bg-gradient-to-b from-dark from-[1%] absolute size-full top-0 z-20'
+    >
+    </div>
+    <img
+      class='relative w-full z-10 h-48 object-cover'
+      src={imgUrl}
+      alt={title}
+    />
+  </div>
+</div>
