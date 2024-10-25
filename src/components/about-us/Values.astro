@@ -1,0 +1,55 @@
+---
+import PlaceholderIcon from '../icons/placeholder';
+import SecTitle from '../ui/sec-title';
+import ValueIcon from '@components/about-us/ValueIcon.astro';
+
+const VALS = [
+  {
+    title: 'Compromiso',
+    icon: PlaceholderIcon,
+  },
+  {
+    title: 'Honestidad',
+    icon: PlaceholderIcon,
+  },
+  {
+    title: 'Excelencia',
+    icon: PlaceholderIcon,
+  },
+  {
+    title: 'Responsabilidad',
+    icon: PlaceholderIcon,
+  },
+  {
+    title: 'Actitud de Servicio',
+    icon: PlaceholderIcon,
+  },
+  {
+    title: 'Respeto por la sociedad y el medio ambiente',
+    icon: PlaceholderIcon,
+  },
+  {
+    title: 'Mejora continua',
+    icon: PlaceholderIcon,
+  },
+];
+---
+
+<section class='mt-36 mb-12'>
+  <SecTitle
+    className='text-bright text-center overflow-visible relative after:h-1.5 after:w-32 after:absolute after:top-9 after:left-1/2 after:-translate-x-1/2 after:bg-bright mb-16'
+  >
+    Valores Corporativos
+  </SecTitle>
+  <div class='flex justify-center'>
+    <div class='inline-flex flex-wrap gap-5 justify-center'>
+      {
+        VALS.map(({ title, icon: Icon }) => (
+          <ValueIcon title={title}>
+            <Icon />
+          </ValueIcon>
+        ))
+      }
+    </div>
+  </div>
+</section>
