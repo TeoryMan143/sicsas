@@ -32,7 +32,7 @@ function IndexCarousel() {
     <section className='bg-carousel bg-cover relative py-8'>
       <div className='absolute top-0 left-0 size-full bg-slate-950/60 z-10' />
       <div className='relative z-20 space-y-5'>
-        <SecTitle>{TITLES[current]}</SecTitle>
+        <SecTitle className='line-clamp-2'>{TITLES[current]}</SecTitle>
         <Carousel opts={{ loop: true }} setApi={setApi}>
           <CarouselContent>
             {Array.from({ length: 3 }).map((_, i) => (
