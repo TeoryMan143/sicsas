@@ -1,8 +1,19 @@
 ---
 import PageTitle from '@/components/PageTitle.astro';
+import SecTitle from '@/components/ui/sec-title';
 import Layout from '@/layouts/Layout.astro';
+import ProductsMenu from '@/components/products/menu';
 ---
 
 <Layout title='Productos'>
   <PageTitle>Productos</PageTitle>
+  <div class='py-20 bg-about-us bg-cover relative'>
+    <div class='absolute z-10 bg-bright/60 size-full inset-0'></div>
+    <SecTitle className='relative z-20'>
+      Productos de Seguridad Industrial
+    </SecTitle>
+  </div>
+  <section class='flex flex-col items-center'>
+    <ProductsMenu client:load />
+  </section>
 </Layout>
