@@ -30,7 +30,7 @@ const { title } = Astro.props;
       <slot />
     </main>
     <Footer />
-    <Toaster client:load />
+    <Toaster client:only='react' />
   </body>
 </html>
 
