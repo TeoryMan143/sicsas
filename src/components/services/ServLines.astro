@@ -12,7 +12,7 @@ const services = await getCollection('services');
   >
     Líneas dentro de los Servicios de los Sistemas Contra Incendio
   </SecTitle>
-  <div class='flex flex-wrap gap-6'>
+  <div class='flex flex-wrap gap-6 justify-center'>
     {
       services.map(({ data: { image, title }, slug }) => (
         <ServiceLink title={title} imgUrl={image} slug={slug} />
