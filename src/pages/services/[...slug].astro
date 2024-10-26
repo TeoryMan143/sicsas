@@ -1,5 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import ServiceLayout from '@/layouts/ServiceLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,20 +13,13 @@ export async function getStaticPaths() {
 
 const {
   data: { image, title },
+  slug,
   render,
 } = Astro.props;
 
 const { Content } = await render();
 ---
 
-<Layout title={title}>
-  <img src={image} alt='' />
-
-  <h2>{title}</h2>
-
-  <article
-    class='prose prose-headings:text-dark prose-li:marker:text-dark prose-strong:text-dark'
-  >
-    <Content />
-  </article>
-</Layout>
+<ServiceLayout image={image} title={title} slug={slug}>
+  <Content />
+</ServiceLayout>
