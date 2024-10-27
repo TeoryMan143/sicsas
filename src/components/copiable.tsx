@@ -17,6 +17,7 @@ function Copiable({
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger
+          asChild
           onClick={() => {
             navigator.clipboard.writeText(addToClipboard);
             toast('Añadido al portapapeles');

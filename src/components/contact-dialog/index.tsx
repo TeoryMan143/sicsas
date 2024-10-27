@@ -1,8 +1,5 @@
 import type React from 'react';
-import MailIcon from '../icons/mail';
-import MarkerIcon from '../icons/marker';
 import PhoneIcon from '../icons/phone';
-import WhatsappIcon from '../icons/whatsapp';
 import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
 import SecTitle from '../ui/sec-title';
 import { cn } from '@/core/utils';
@@ -79,7 +76,7 @@ function ContactItem({
         <div
           className={cn(
             `
-              bg-white py-3 inline-flex pl-3 pr-4 items-center relative triangle group transition
+              bg-white py-3 inline-flex pl-3 pr-4 items-center relative triangle group transition cursor-pointer
               hover:translate-x-8 hover:bg-bright
               after:hover:border-t-bright
             `,

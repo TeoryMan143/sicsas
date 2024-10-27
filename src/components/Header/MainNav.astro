@@ -1,0 +1,26 @@
+---
+import { LINKS_DATA } from '@/core/data';
+import { cn } from '@/core/utils';
+
+const path = Astro.url.pathname;
+---
+
+<nav class='hidden lg:inline-block'>
+  <ul class='flex gap-16'>
+    {
+      LINKS_DATA.map(({ href, text }) => (
+        <li
+          class={cn('hover:text-pale  transition-colors', {
+            'text-bright': path === href,
+          })}
+        >
+          <a class='inline-block' href={href}>
+            {text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<sty

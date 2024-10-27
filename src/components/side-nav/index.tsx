@@ -6,29 +6,7 @@ import PersonIcon from '../icons/person';
 import { useState } from 'react';
 import './style.css';
 import ContactDialog from '../contact-dialog';
-
-const LINKS_DATA = [
-  {
-    href: '/',
-    icon: <HomeIcon />,
-    text: 'Inicio',
-  },
-  {
-    href: '/about-us',
-    icon: <PersonIcon />,
-    text: 'Quiénes somos',
-  },
-  {
-    href: '/services',
-    icon: <ConfigIcon />,
-    text: 'Servicios',
-  },
-  {
-    href: '/products',
-    icon: <BoxIcon />,
-    text: 'Productos',
-  },
-] as const;
+import { LINKS_DATA } from '@/core/data';
 
 function SideNav() {
   const [open, setOpen] = useState(false);

@@ -1,0 +1,18 @@
+.contact-c {
+  transform-origin: top;
+  animation-name: con;
+  animation-timeline: scroll();
+  animation-range-end: 300px;
+  animation-fill-mode: forwards;
+}
+
+@keyframes con {
+  from {
+    background-color: rgb(51 65 92);
+  }
+
+  to {
+    color: rgb(0 18 51);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
