@@ -3,30 +3,37 @@ import SecTitle from '@components/ui/sec-title';
 ---
 
 <section
-  class='p-6 my-28 flex flex-col gap-4 bg-bright relative overflow-y-visible'
+  class='p-6 my-28 bg-bright relative overflow-y-visible lg:p-16 flex justify-center'
 >
   <div class='top-triangle'></div>
   <div class='bottom-triangle'></div>
-  <div>
-    <SecTitle
-      className='text-white text-right overflow-visible relative after:h-1.5 after:w-1/2 after:absolute after:top-9 after:right-0 after:bg-white'
-    >
-      Nuestra Visión
-    </SecTitle>
-    <p class='prose font-questrial mt-4 text-white text-right'>
-      Ser una empresa modelo y líder en el ofrecimiento de productos y servicios
-      de Sistemas Contra Incendio y de Seguridad Industrial, para preservar y
-      proteger a las personas, los equipos, las instalaciones y el medio
-      ambiente, garantizado la satisfacción de los clientes a través de un
-      servicio que brinda atención, apoyo permanente, precios competitivos y
-      entregas oportunas.
-    </p>
+  <div
+    class='flex flex-col gap-4 lg:flex-row-reverse lg:p-20 max-w-[1300px] lg:gap-14'
+  >
+    <div class='flex flex-col items-end justify-center'>
+      <SecTitle
+        className={`
+          text-white text-right overflow-visible relative after:h-1.5 after:w-1/2 after:absolute after:top-9 after:right-0 after:bg-white
+          lg:mb-5 lg:after:top-10
+        `}
+      >
+        Nuestra Visión
+      </SecTitle>
+      <p class='prose font-questrial mt-4 text-white text-right'>
+        Ser una empresa modelo y líder en el ofrecimiento de productos y
+        servicios de Sistemas Contra Incendio y de Seguridad Industrial, para
+        preservar y proteger a las personas, los equipos, las instalaciones y el
+        medio ambiente, garantizado la satisfacción de los clientes a través de
+        un servicio que brinda atención, apoyo permanente, precios competitivos
+        y entregas oportunas.
+      </p>
+    </div>
+    <img
+      class='aspect-[2/3] object-cover w-56 mx-auto rounded-sm'
+      src='/img/vision.webp'
+      alt='Visión'
+    />
   </div>
-  <img
-    class='aspect-[2/3] object-cover w-56 mx-auto rounded-sm'
-    src='/img/vision.webp'
-    alt='Visión'
-  />
 </section>
 
 <style>

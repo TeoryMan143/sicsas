@@ -8,7 +8,10 @@ function SecTitle({
   return (
     <h2
       {...props}
-      className={cn('text-white font-bold text-2xl text-center', className)}
+      className={cn(
+        'text-white font-bold text-2xl text-center lg:text-4xl',
+        className,
+      )}
     >
       {children}
     </h2>

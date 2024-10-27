@@ -2,25 +2,30 @@
 import SecTitle from '@components/ui/sec-title';
 ---
 
-<section class='p-6 mt-2 flex flex-col gap-4'>
-  <div>
-    <SecTitle
-      className='text-bright text-left overflow-visible relative after:h-1.5 after:w-1/2 after:absolute after:top-9 after:left-0 after:bg-bright'
-    >
-      Nuestra Misión
-    </SecTitle>
-    <p class='prose font-questrial mt-4 text-black'>
-      Seguridad Industrial Cárdenas ofrece servicios y productos en Sistemas
-      Contra Incendio y Seguridad Industrial para la solución integral en
-      protección y seguridad de las personas, de los equipos, de las
-      instalaciones y del medio ambiente, a través de productos y servicios que
-      cumplen estándares de calidad y de un equipo de trabajo que opera en un
-      marco de ética y responsabilidad social.
-    </p>
+<section class='p-6 mt-2 flex justify-center'>
+  <div class='flex flex-col gap-4 lg:flex-row lg:p-16 max-w-[1300px] lg:gap-14'>
+    <div class='flex flex-col justify-center items-start'>
+      <SecTitle
+        className={`
+          text-bright text-left overflow-visible relative after:h-1.5 after:w-1/2 after:absolute after:top-9 after:left-0 after:bg-bright
+          lg:mb-5 lg:after:top-10
+        `}
+      >
+        Nuestra Misión
+      </SecTitle>
+      <p class='prose font-questrial mt-4 text-black'>
+        Seguridad Industrial Cárdenas ofrece servicios y productos en Sistemas
+        Contra Incendio y Seguridad Industrial para la solución integral en
+        protección y seguridad de las personas, de los equipos, de las
+        instalaciones y del medio ambiente, a través de productos y servicios
+        que cumplen estándares de calidad y de un equipo de trabajo que opera en
+        un marco de ética y responsabilidad social.
+      </p>
+    </div>
+    <img
+      class='aspect-[2/3] object-cover w-56 mx-auto rounded-sm'
+      src='/img/mission.webp'
+      alt='Misión'
+    />
   </div>
-  <img
-    class='aspect-[2/3] object-cover w-56 mx-auto rounded-sm'
-    src='/img/mission.webp'
-    alt='Misión'
-  />
 </section>
