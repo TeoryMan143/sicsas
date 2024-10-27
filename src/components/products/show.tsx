@@ -39,7 +39,7 @@ function ShowProducts({ value }: Props) {
             <div className='flex flex-wrap gap-3'>
               {Array.from({ length: 3 }).map((_, i) => (
                 <img
-                  key={value + 'img'}
+                  key={value + 'img' + i}
                   src={`/img/prods/${value}/${i + 1}.webp`}
                   className='aspect-square object-contain size-24 border border-detail rounded-sm'
                 />
