@@ -42,7 +42,7 @@ function SideNav() {
         onClick={() => setOpen(false)}
       />
       <button
-        className='text-detail text-3xl absolute left-8 bottom-1/2 translate-y-1/2 side-nav'
+        className='text-detail text-3xl absolute left-8 bottom-1/2 translate-y-1/2 side-nav lg:hidden'
         onClick={() => setOpen(true)}
       >
         <svg

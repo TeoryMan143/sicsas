@@ -3,7 +3,7 @@ import SideNav from './side-nav';
 ---
 
 <header
-  class='flex justify-center fixed w-dvw z-30 bg-white p-1 backdrop-blur-sm h-24'
+  class='flex justify-center items-center fixed w-dvw z-30 bg-white p-1 backdrop-blur-sm h-24'
 >
   <SideNav client:load />
   <a href='/'>
@@ -27,7 +27,7 @@ import SideNav from './side-nav';
     }
   }
 
-  img {
+  a {
     transform-origin: top;
     animation-name: move-img;
     animation-timeline: scroll();
@@ -42,7 +42,7 @@ import SideNav from './side-nav';
 
     to {
       scale: 0.6;
-      transform: translateX(100%);
+      transform: translate(100%, 30%);
     }
   }
 </style>
