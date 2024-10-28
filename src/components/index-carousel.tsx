@@ -29,13 +29,13 @@ function IndexCarousel() {
   }, [api]);
 
   return (
-    <section className='bg-carousel bg-cover relative py-8 h-full flex items-center'>
+    <section className='bg-carousel bg-cover relative py-8 flex items-center justify-center'>
       <div className='absolute top-0 left-0 size-full bg-slate-950/60 z-10' />
       <div
         className='
-          relative z-20 space-y-5 
-          lg:grid lg:grid-cols-2 lg:px-8
-        '
+            relative z-20 space-y-5 
+            lg:grid lg:grid-cols-2 lg:px-8 lg:max-w-[1500px]
+          '
       >
         <div className='lg:grid lg:place-content-center'>
           <SecTitle className='line-clamp-2 lg:line-clamp-4 lg:text-4xl lg:leading-[3.5rem] lg:text-left lg:pr-12 lg:ml-16'>

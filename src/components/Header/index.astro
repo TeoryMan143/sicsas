@@ -1,7 +1,9 @@
 ---
 import SideNav from '@components/side-nav';
 import ContactInfo from './contact-info';
-import MainNav from './MainNav.astro';
+import MainNav from './main-nav';
+
+const path = Astro.url.pathname;
 ---
 
 <header class='fixed w-dvw z-30 backdrop-blur-sm'>
@@ -15,7 +17,7 @@ import MainNav from './MainNav.astro';
       <img class='h-20 lg:h-24' src='/full-logo.webp' alt='SICSAS logo' />
     </a>
     <div class='hidden lg:inline-block flex-1'></div>
-    <MainNav class='flex-1' client:load />
+    <MainNav path={path} client:load />
   </div>
 </header>
 

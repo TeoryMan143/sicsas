@@ -47,11 +47,6 @@ export const LINKS_DATA = [
     text: 'Inicio',
   },
   {
-    href: '/about-us',
-    icon: <PersonIcon />,
-    text: 'Quiénes somos',
-  },
-  {
     href: '/services',
     icon: <ConfigIcon />,
     text: 'Servicios',

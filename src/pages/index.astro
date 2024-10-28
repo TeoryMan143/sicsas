@@ -2,9 +2,15 @@
 import PageTitle from '@components/PageTitle.astro';
 import Layout from '@layouts/Layout.astro';
 import IndexCarousel from '@components/index-carousel';
+import Mission from '@/components/about-us/Mission.astro';
+import Vision from '@/components/about-us/Vision.astro';
+import Values from '@/components/about-us/Values.astro';
 ---
 
 <Layout title='Seguridad Insdustrial Cardenas'>
   <PageTitle>Inicio</PageTitle>
   <IndexCarousel client:load />
+  <Mission />
+  <Vision />
+  <Values />
 </Layout>

@@ -10,7 +10,7 @@ import Copiable from '../copiable';
 import ContactForm from './form';
 import { CONTACT_INFO } from '@/core/data';
 
-function ContactDialog() {
+function ContactDialog({ desktop = false }: { desktop?: boolean }) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -22,19 +22,28 @@ function ContactDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button
-          className='
+        {desktop ? (
+          <button>Contactenos</button>
+        ) : (
+          <button
+            className='
           text-pale inline-flex items-center gap-3 transition-colors
           hover:text-bright
         '
-        >
-          <PhoneIcon className='text-2xl' />
-          Contactenos
-        </button>
+          >
+            <PhoneIcon className='text-2xl' />
+            Contactenos
+          </button>
+        )}
       </DialogTrigger>
-      <DialogContent className='flex flex-col p-0 mx-1 border-0 overflow-x-hidden max-h-[80%]'>
+      <DialogContent
+        className='
+          flex flex-col p-0 mx-1 border-0 overflow-x-hidden max-h-[80%] 
+          lg:flex-row lg:max-w-[1000px]
+        '
+      >
         <DialogTitle className='sr-only'>Contáctanos</DialogTitle>
-        <div className='bg-contact bg-cover relative'>
+        <div className='bg-contact bg-cover relative flex-1'>
           <div className='bg-slate-900/60 h-full w-full absolute z-20' />
           <div className='relative z-30 mt-12 mb-6'>
             <SecTitle className='text-left overflow-visible inline-block relative ml-6 after:h-1.5 after:w-1/2 after:absolute after:top-9 after:left-0 after:bg-white'>
@@ -47,7 +56,7 @@ function ContactDialog() {
             </ul>
           </div>
         </div>
-        <div className='p-5 font-rubik'>
+        <div className='p-5 font-rubik  flex-1'>
           <h3 className='text-bright text-2xl text-center mb-3'>
             Envíanos un mensaje
           </h3>
