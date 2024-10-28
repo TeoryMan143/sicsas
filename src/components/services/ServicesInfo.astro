@@ -1,4 +1,5 @@
 ---
+import { cn } from '@/core/utils';
 import SecTitle from '../ui/sec-title';
 
 interface Props {
@@ -10,17 +11,26 @@ interface Props {
 const { title, imgUrl, reverse = false } = Astro.props;
 ---
 
-<div class='flex flex-col'>
-  <div class='bg-dark py-16 flex-1'>
+<div
+  class={cn('flex flex-col lg:flex-row-reverse', {
+    'lg:flex-row': reverse,
+  })}
+>
+  <div class='bg-dark py-16 flex-1 lg:grid lg:place-content-center px-12'>
     <SecTitle>{title}</SecTitle>
   </div>
   <div class='flex-1 relative'>
     <div
-      class='bg-gradient-to-b from-dark from-[1%] absolute size-full top-0 z-20'
+      class={cn(
+        'bg-gradient-to-b from-dark from-[1%] absolute size-full top-0 z-20 lg:bg-gradient-to-l',
+        {
+          'lg:bg-gradient-to-r': reverse,
+        },
+      )}
     >
     </div>
     <img
-      class='relative w-full z-10 h-48 object-cover'
+      class='relative w-full z-10 h-48 object-cover lg:h-80'
       src={imgUrl}
       alt={title}
     />

@@ -29,7 +29,7 @@ function IndexCarousel() {
   }, [api]);
 
   return (
-    <section className='bg-carousel bg-cover relative py-8'>
+    <section className='bg-carousel bg-cover relative py-8 h-full flex items-center'>
       <div className='absolute top-0 left-0 size-full bg-slate-950/60 z-10' />
       <div
         className='
@@ -38,7 +38,7 @@ function IndexCarousel() {
         '
       >
         <div className='lg:grid lg:place-content-center'>
-          <SecTitle className='line-clamp-2 lg:line-clamp-4 lg:text-4xl lg:leading-[3.5rem] lg:text-left lg:pr-12 lg:ml-16 '>
+          <SecTitle className='line-clamp-2 lg:line-clamp-4 lg:text-4xl lg:leading-[3.5rem] lg:text-left lg:pr-12 lg:ml-16'>
             {TITLES[current]}
           </SecTitle>
         </div>
