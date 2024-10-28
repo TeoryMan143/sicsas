@@ -16,13 +16,13 @@ const { title, imgUrl, reverse = false } = Astro.props;
     'lg:flex-row': reverse,
   })}
 >
-  <div class='bg-dark py-16 flex-1 lg:grid lg:place-content-center px-12'>
+  <div class='bg-dark py-16 flex-1 lg:grid lg:place-content-center'>
     <SecTitle>{title}</SecTitle>
   </div>
   <div class='flex-1 relative'>
     <div
       class={cn(
-        'bg-gradient-to-b from-dark from-[1%] absolute size-full top-0 z-20 lg:bg-gradient-to-l',
+        'bg-gradient-to-b from-dark/90 from-[1%] absolute size-full top-0 z-20 lg:bg-gradient-to-l',
         {
           'lg:bg-gradient-to-r': reverse,
         },

@@ -11,23 +11,28 @@ const { title, image, slug } = Astro.props;
 ---
 
 <Layout title={title}>
-  <div>
-    <img
-      class='aspect-video h-48 object-contain rounded-sm border-detail border mx-auto mb-3'
-      src={image}
-      alt={title}
-      transition:name={slug + 'img'}
-    />
-    <h1
-      class='text-center text-xl text-white py-5 bg-bright font-bold'
-      transition:name={slug + 'title'}
-    >
-      {title}
-    </h1>
-    <article
-      class='prose prose-headings:text-dark prose-li:marker:text-dark prose-strong:text-dark p-5 mt-2'
-    >
-      <slot />
-    </article>
+  <div class='lg:flex lg:justify-center mb-16'>
+    <div class='lg:flex lg:flex-row lg:max-w-[1300px]'>
+      <img
+        class='aspect-video h-48 object-contain rounded-sm border-detail border mx-auto
+          lg:m-5 lg:w-96 lg:h-full'
+        src={image}
+        alt={title}
+        transition:name={slug + 'img'}
+      />
+      <div class='lg:flex-1'>
+        <h1
+          class='text-center text-xl text-white py-5 bg-bright font-bold rounded-sm'
+          transition:name={slug + 'title'}
+        >
+          {title}
+        </h1>
+        <article
+          class='prose prose-headings:text-dark prose-li:marker:text-dark prose-strong:text-dark p-5 mt-2 lg:max-h-[700px] lg:overflow-y-auto'
+        >
+          <slot />
+        </article>
+      </div>
+    </div>
   </div>
 </Layout>
