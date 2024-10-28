@@ -47,12 +47,12 @@ export const LINKS_DATA = [
     text: 'Inicio',
   },
   {
-    href: '/services',
+    href: '/services/',
     icon: <ConfigIcon />,
     text: 'Servicios',
   },
   {
-    href: '/products',
+    href: '/products/',
     icon: <BoxIcon />,
     text: 'Productos',
   },

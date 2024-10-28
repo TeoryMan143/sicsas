@@ -5,7 +5,6 @@ import ContactDialog from '../contact-dialog';
 function MainNav({ path }: { path: string }) {
   return (
     <nav className='hidden lg:inline-block'>
-      {path}
       <ul className='flex gap-16'>
         {LINKS_DATA.map(({ href, text }) => (
           <li
