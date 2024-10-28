@@ -27,9 +27,9 @@ Q 210.45 114.35 207.2 111.1 204 108.1 199.55 108.1 195.1 108.1 192.1 111.1 188.8
         <path
           id='str-serv'
           stroke='currentColor'
-          stroke-width='16'
-          stroke-linejoin='round'
-          stroke-linecap='round'
+          strokeWidth='16'
+          strokeLinejoin='round'
+          strokeLinecap='round'
           fill='none'
           d='
 M 325.1 96

@@ -76,9 +76,9 @@ Q 402.2 149.9 403.1 155.55 403.95 161.1 407.2 164.1 410.2 167.2 415.7 167.7 421.
         <path
           id='str-enviro'
           stroke='currentColor'
-          stroke-width='16'
-          stroke-linejoin='round'
-          stroke-linecap='round'
+          strokeWidth='16'
+          strokeLinejoin='round'
+          strokeLinecap='round'
           fill='none'
           d='
 M 476.8 227.15

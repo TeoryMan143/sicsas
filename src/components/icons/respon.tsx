@@ -15,9 +15,9 @@ function ResponsIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         <path
           id='res'
           stroke='currentColor'
-          stroke-width='16'
-          stroke-linejoin='round'
-          stroke-linecap='round'
+          strokeWidth='16'
+          strokeLinejoin='round'
+          strokeLinecap='round'
           fill='none'
           d='
 M 395.65 276.95

@@ -46,9 +46,9 @@ Q 291.75 325.8 307.1 310.35 330.9 286.7 330.9 253.1 330.9 219.5 307.1 195.75 Z'
         <path
           id='str-imp'
           stroke='currentColor'
-          stroke-width='16'
-          stroke-linejoin='round'
-          stroke-linecap='round'
+          strokeWidth='16'
+          strokeLinejoin='round'
+          strokeLinecap='round'
           fill='none'
           d='
 M 111.3 60.95
