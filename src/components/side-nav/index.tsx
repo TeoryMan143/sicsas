@@ -1,8 +1,4 @@
 import { cn } from '@/core/utils';
-import BoxIcon from '../icons/box';
-import ConfigIcon from '../icons/config';
-import HomeIcon from '../icons/home';
-import PersonIcon from '../icons/person';
 import { useState } from 'react';
 import './style.css';
 import ContactDialog from '../contact-dialog';
@@ -14,9 +10,12 @@ function SideNav() {
   return (
     <>
       <div
-        className={cn('fixed h-dvh w-dvw bg-slate-600/50 z-[100] hidden', {
-          'inline-block': open,
-        })}
+        className={cn(
+          'fixed h-dvh w-dvw bg-slate-600/50 z-[100] hidden top-0',
+          {
+            'inline-block': open,
+          },
+        )}
         onClick={() => setOpen(false)}
       />
       <button
