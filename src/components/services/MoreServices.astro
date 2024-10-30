@@ -23,7 +23,7 @@ const { current } = Astro.props;
       {
         serviceImages.map(props => {
           if (props.slug === current) return;
-          return <ServiceLink {...props} />;
+          return <ServiceLink {...props} tran={false} />;
         })
       }
     </div>
@@ -50,7 +50,6 @@ const { current } = Astro.props;
 
         scrollerContent.forEach(item => {
           const duplicatedItem = item.cloneNode(true) as HTMLElement;
-          duplicatedItem.setAttribute('aria-hidden', 'true');
           scrollerInner.appendChild(duplicatedItem);
         });
       });

@@ -3,26 +3,43 @@ interface Props {
   title: string;
   imgUrl: string;
   slug: string;
-  transition?: boolean;
+  tran?: boolean;
 }
 
-const { imgUrl, title, slug, transition = true } = Astro.props;
+const { imgUrl, title, slug, tran = true } = Astro.props;
 ---
 
 <a
   class='inline-flex flex-col w-40 rounded-sm group transition hover:scale-105 hover:bg-bright'
   href={`/services/${slug}`}
 >
-  <img
-    class='aspect-square object-cover w-full mx-auto border-detail border rounded-sm'
-    src={imgUrl}
-    alt={title}
-    transition:name={transition ? slug + 'img' : undefined}
-  />
-  <p
-    class='text-center text-bright py-3 group-hover:text-white transition-colors'
-    transition:name={transition ? slug + 'title' : undefined}
-  >
-    {title}
-  </p>
+  {
+    tran ? (
+      <>
+        <img
+          class='aspect-square object-cover w-full mx-auto border-detail border rounded-sm'
+          src={imgUrl}
+          alt={title}
+          transition:name={slug + 'img'}
+        />
+        <p
+          class='text-center text-bright py-3 group-hover:text-white transition-colors'
+          transition:name={slug + 'title'}
+        >
+          {title}
+        </p>
+      </>
+    ) : (
+      <>
+        <img
+          class='aspect-square object-cover w-full mx-auto border-detail border rounded-sm'
+          src={imgUrl}
+          alt={title}
+        />
+        <p class='text-center text-bright py-3 group-hover:text-white transition-colors'>
+          {title}
+        </p>
+      </>
+    )
+  }
 </a>
