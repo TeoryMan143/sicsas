@@ -1,0 +1,28 @@
+---
+import { LINKS_DATA } from '@/core/data';
+import ContactDialog from '../contact-dialog';
+
+const path = Astro.url.pathname;
+---
+
+<nav class='hidden lg:inline-block'>
+  <ul class='flex gap-16'>
+    {
+      LINKS_DATA.map(({ href, text }) => (
+        <li
+          class='hover:text-pale  transition-colors'
+          class:list={{
+            'text-bright': path === href,
+          }}
+        >
+          <a class='inline-block' href={href}>
+            {text}
+          </a>
+        </li>
+      ))
+    }
+    <li class='hover:text-pale transition-colors'>
+      <ContactDialog desktop client:load />
+    </li>
+  </ul>
+</nav>

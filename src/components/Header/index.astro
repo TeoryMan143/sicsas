@@ -1,7 +1,7 @@
 ---
 import SideNav from '@components/side-nav';
 import ContactInfo from './contact-info';
-import MainNav from './main-nav';
+import MainNav from './MainNav.astro';
 
 const path = Astro.url.pathname;
 ---
@@ -17,7 +17,7 @@ const path = Astro.url.pathname;
       <img class='h-20 lg:h-24' src='/full-logo.webp' alt='SICSAS logo' />
     </a>
     <div class='hidden lg:inline-block flex-1'></div>
-    <MainNav path={path} client:load />
+    <MainNav transition:persist />
   </div>
 </header>
 
