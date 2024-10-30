@@ -36,6 +36,7 @@ function ProductsMenu() {
               w-[300px] text-center justify-center mt-3 relative bg-bright text-white rounded-sm transition
               hover:bg-pale hover:text-white
               active:scale-95
+              lg:text-xl
             '
           >
             <svg
@@ -60,7 +61,7 @@ function ProductsMenu() {
             </span>
           </Button>
         </PopoverTrigger>
-        <PopoverContent className=' p-0'>
+        <PopoverContent className='p-0'>
           <Command>
             <CommandInput placeholder='Buscar producto...' />
             <CommandList>
@@ -73,7 +74,7 @@ function ProductsMenu() {
                     value={prod.value}
                     keywords={[prod.label]}
                     onSelect={currentValue => {
-                      setValue(currentValue === value ? '' : currentValue);
+                      setValue(currentValue);
                       setOpen(false);
                     }}
                   >
