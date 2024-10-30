@@ -3,7 +3,6 @@ import ConfigIcon from '@/components/icons/config';
 import HomeIcon from '@/components/icons/home';
 import MailIcon from '@/components/icons/mail';
 import MarkerIcon from '@/components/icons/marker';
-import PersonIcon from '@/components/icons/person';
 import PhoneIcon from '@/components/icons/phone';
 import WhatsappIcon from '@/components/icons/whatsapp';
 

@@ -3,9 +3,10 @@ interface Props {
   title: string;
   imgUrl: string;
   slug: string;
+  transition?: boolean;
 }
 
-const { imgUrl, title, slug } = Astro.props;
+const { imgUrl, title, slug, transition = true } = Astro.props;
 ---
 
 <a
@@ -16,11 +17,11 @@ const { imgUrl, title, slug } = Astro.props;
     class='aspect-square object-cover w-full mx-auto border-detail border rounded-sm'
     src={imgUrl}
     alt={title}
-    transition:name={slug + 'img'}
+    transition:name={transition ? slug + 'img' : undefined}
   />
   <p
     class='text-center text-bright py-3 group-hover:text-white transition-colors'
-    transition:name={slug + 'title'}
+    transition:name={transition ? slug + 'title' : undefined}
   >
     {title}
   </p>
