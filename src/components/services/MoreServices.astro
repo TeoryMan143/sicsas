@@ -59,7 +59,19 @@ const { current } = Astro.props;
 
 <style>
   .scroller {
-    max-width: 1200px;
+    max-width: 350px;
+  }
+
+  @media (min-width: 768px) {
+    .scroller {
+      max-width: 650px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .scroller {
+      max-width: 1200px;
+    }
   }
 
   .scroller__inner {
