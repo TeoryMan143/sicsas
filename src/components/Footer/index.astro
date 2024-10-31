@@ -1,0 +1,28 @@
+---
+import MailIcon from '@components/icons/mail';
+import WhatsappIcon from '@components/icons/whatsapp';
+import ExImages from './ExImages.astro';
+---
+
+<footer class='bg-pale p-5 h-full text-white grid grid-cols-1 lg:grid-cols-2'>
+  <div class='space-y-5'>
+    <p class='text-xl'>
+      Para cotizaciones o programar una visita, por favor contactarnos.
+    </p>
+    <div>
+      <div class='flex items-center gap-2'>
+        <MailIcon className='text-3xl' />
+        <p>Correo electrónico</p>
+      </div>
+      <p>seguridadindustrialcardenas@gmail.com</p>
+    </div>
+    <div>
+      <div class='flex items-center gap-2'>
+        <WhatsappIcon className='text-3xl' />
+        <p>Celulares y Whatsapp</p>
+      </div>
+      <p>316 423 7947 y 316 423 7948</p>
+    </div>
+  </div>
+  <ExImages />
+</footer>
