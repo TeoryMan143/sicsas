@@ -11,7 +11,7 @@ interface Props {
 const { title, image, slug } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout title={'Servicio - ' + title}>
   <div class='lg:flex lg:justify-center mb-16 lg:mb-32'>
     <div class='lg:flex lg:flex-row lg:max-w-[1300px]'>
       <img
