@@ -1,6 +1,6 @@
 ---
 title: 'Sistema Detección, Alamar y Evacuación'
-image: '/img/ser-pl.webp'
+image: '/img/servs/detal.webp'
 ---
 
 Un sistema de detección, alarma y evacuación (DAES), según las normas de la NFPA (National Fire Protection Association), es un conjunto integrado de dispositivos y equipos diseñados para:

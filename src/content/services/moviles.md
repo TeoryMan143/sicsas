@@ -1,6 +1,6 @@
 ---
 title: 'Sistemas de Extintores Móviles'
-image: '/img/ser-pl.webp'
+image: '/img/servs/ext.webp'
 ---
 
 Los sistemas de extintores móviles son equipos diseñados para combatir incendios de pequeña y mediana escala en sus primeras etapas. Son herramientas esenciales en cualquier entorno, ya sea residencial, comercial o industrial, y juegan un papel crucial en la seguridad contra incendios.

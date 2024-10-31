@@ -1,6 +1,6 @@
 ---
 title: 'Sistemas Automáticos Wet Chemical'
-image: '/img/ser-pl.webp'
+image: '/img/servs/wet-chemical.webp'
 ---
 
 Los sistemas automáticos wet chemical son soluciones especializadas en la extinción de incendios, diseñadas específicamente para proteger cocinas comerciales e industriales. Estos sistemas utilizan un agente extintor a base de agua con aditivos químicos que resulta altamente eficaz en la extinción de fuegos originados en aceites de cocina vegetales y grasas animales.

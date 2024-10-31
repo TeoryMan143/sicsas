@@ -1,6 +1,6 @@
 ---
 title: 'Sistemas Contra Incendio por Espuma'
-image: '/img/ser-pl.webp'
+image: '/img/servs/espuma.webp'
 ---
 
 Estos sistemas utilizan una mezcla de agua y un concentrado de espuma para generar una barrera física que aísla el combustible del oxígeno, elemento esencial para la combustión. La espuma, al ser más ligera que los líquidos inflamables, forma una capa flotante que:

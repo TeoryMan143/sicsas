@@ -1,6 +1,6 @@
 ---
 title: 'Puertas Cortafuego'
-image: '/img/ser-pl.webp'
+image: '/img/servs/puerta.webp'
 ---
 
 Las puertas cortafuego, según la **NFPA** _(National Fire Protection Association)_, son elementos de seguridad pasiva contra incendios diseñados para limitar la propagación del fuego y del humo dentro de un edificio. Estas puertas crean barreras físicas que compartimentan un edificio, permitiendo que cada compartimento se incendie de forma independiente, evitando así que el fuego se extienda rápidamente a otras áreas.

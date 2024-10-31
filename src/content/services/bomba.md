@@ -1,6 +1,6 @@
 ---
 title: 'Sistema de Bomba Contra Incendio'
-image: '/img/ser-pl.webp'
+image: '/img/servs/bomba.webp'
 ---
 
 Un sistema de bomba contra incendio es un componente fundamental en la protección contra incendios de edificios y estructuras. Su función principal es proporcionar la presión y el caudal de agua necesarios para alimentar los sistemas de extinción, como rociadores automáticos, mangueras y hidrantes, en caso de emergencia.

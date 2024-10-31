@@ -1,6 +1,6 @@
 ---
 title: 'Rociadores'
-image: '/img/ser-pl.webp'
+image: '/img/servs/rociadores.webp'
 ---
 
 Un sistema de rociadores es un sistema de protección contra incendios que utiliza una red de tuberías que contienen agua. Estas tuberías están equipadas con boquillas especiales llamadas rociadores, que se activan automáticamente cuando la temperatura en un área alcanza un cierto nivel.
