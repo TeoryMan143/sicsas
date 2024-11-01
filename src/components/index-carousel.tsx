@@ -9,6 +9,7 @@ import {
 } from './ui/carousel';
 import { useEffect, useState } from 'react';
 import SecTitle from './ui/sec-title';
+import Autoplay from 'embla-carousel-autoplay';
 
 const TITLES = [
   'Soluciones Integrales en Sistemas Contra Incendio',
@@ -43,7 +44,15 @@ function IndexCarousel() {
           </SecTitle>
         </div>
         <div>
-          <Carousel opts={{ loop: true }} setApi={setApi}>
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
+            opts={{ loop: true }}
+            setApi={setApi}
+          >
             <CarouselContent className='lg:px-20'>
               {Array.from({ length: 3 }).map((_, i) => (
                 <CarouselItem className='lg:basis-full' key={i}>
