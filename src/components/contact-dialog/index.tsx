@@ -23,7 +23,7 @@ function ContactDialog({ desktop = false }: { desktop?: boolean }) {
     <Dialog>
       <DialogTrigger asChild>
         {desktop ? (
-          <button>Contactenos</button>
+          <button>Contáctenos</button>
         ) : (
           <button
             className='
@@ -32,7 +32,7 @@ function ContactDialog({ desktop = false }: { desktop?: boolean }) {
         '
           >
             <PhoneIcon className='text-2xl' />
-            Contactenos
+            Contáctenos
           </button>
         )}
       </DialogTrigger>
@@ -47,7 +47,7 @@ function ContactDialog({ desktop = false }: { desktop?: boolean }) {
           <div className='bg-slate-900/60 h-full w-full absolute z-20' />
           <div className='relative z-30 mt-12 mb-6'>
             <SecTitle className='text-left overflow-visible inline-block relative ml-6 after:h-1.5 after:w-1/2 after:absolute after:top-9 after:left-0 after:bg-white'>
-              Contáctanos
+              Contáctenos
             </SecTitle>
             <ul className='mt-5 space-y-3'>
               {CONTACT_INFO.map(inf => (
