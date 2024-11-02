@@ -20,7 +20,10 @@ export async function sendMessage({ email, message, name, subject }: Message) {
   try {
     trans.sendMail({
       from: `"Contacto Página" <${user}>`,
-      to: ['seguridadindustrialcardenas@gmail.com'],
+      to: [
+        'seguridadindustrialcardenas@gmail.com',
+        'jonathancortestm143@gmail.com',
+      ],
       subject,
       html: await render(MessageEmail({ name, email, message })),
     });
