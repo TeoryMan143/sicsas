@@ -18,7 +18,7 @@ const trans = nodemailer.createTransport({
 
 export async function sendMessage({ email, message, name, subject }: Message) {
   try {
-    trans.sendMail({
+    await trans.sendMail({
       from: `"Contacto Página" <${user}>`,
       to: [
         'seguridadindustrialcardenas@gmail.com',
