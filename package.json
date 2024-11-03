@@ -1,14 +1,15 @@
 {
   "name": "sicsas",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "email": "email dev"
+    "email": "email dev",
+    "test": "vitest"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -44,7 +45,10 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
+    "@testing-library/react": "^16.0.1",
     "@types/nodemailer": "^6.4.16",
-    "react-email": "^3.0.2"
+    "jsdom": "^25.0.1",
+    "react-email": "^3.0.2",
+    "vitest": "^2.1.4"
   }
 }
