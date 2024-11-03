@@ -1,12 +1,8 @@
-import { productTypes, type ProductTitles, type ProductValues } from './data';
+import { productTypes, type ProductValues } from './data';
 
 type Props = {
   value: ProductValues;
 };
-
-const productTitle = Object.fromEntries(
-  productTypes.map(({ value, label }) => [value, label]),
-) as Record<ProductValues, ProductTitles>;
 
 function ShowProducts({ value }: Props) {
   if (value !== 'all') {
