@@ -1,5 +1,5 @@
 ---
-title: 'Sistema Detección, Alamar y Evacuación'
+title: 'Sistema Detección, Alarma y Evacuación'
 image: '/img/servs/detal.webp'
 ---
 
